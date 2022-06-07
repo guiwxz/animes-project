@@ -68,6 +68,7 @@ const DataTable: React.FC<DataTableProps> = ({ data, columns, onRowClick }) => {
                     {icons.map(({ icon, onClick }) => {
                       return (
                         <div
+                          id={removeAction && "removeButton"}
                           onClick={() => onClick(it)}
                           style={{
                             float: "left", // kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk funcionou perfeitamente
@@ -112,6 +113,7 @@ const DataTable: React.FC<DataTableProps> = ({ data, columns, onRowClick }) => {
               return (
                 <TableRowData
                   key={name+i}
+                  id="openEditModal"
                   onDoubleClick={() => onRowClick(it)}
                   //width="30%"
                   // onDoubleClick={() => {

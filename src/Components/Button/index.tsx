@@ -5,13 +5,13 @@ interface ButtonProps {
   onClick: (payload: any) => void;
   secondary?: boolean;
   color?: string;
-  testPath: string;
+  testid: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, color, secondary, testPath, children }) => {
-  console.log(testPath);
+const Button: React.FC<ButtonProps> = ({ onClick, color, secondary, testid, children }) => {
+  console.log(testid);
   return (
-    <StyledButton onClick={onClick} secondary={secondary ?? false} color={color} data-test-id='button'>
+    <StyledButton onClick={onClick} secondary={secondary ?? false} color={color} id={testid}>
       {children}
     </StyledButton>
   );

@@ -59,7 +59,6 @@ const Watching: React.FC = () => {
         <PageHeader
           onClick={() => setOpenModal(true)}
           title="Animes watching"
-          testPath="watching"
         />
       </Grid>
       <Grid item xs={12}>
@@ -122,9 +121,9 @@ const Watching: React.FC = () => {
         <Grid container>
           <Grid item xs={12}>
             <Form handleSubmit={handleSubmit}>
-              <InputField label="Nome" name="name" />
-              <InputField label="Descrição" name="description" />
-              <InputField label="Episódio" name="ep_counter" type="number" />
+              <InputField label="Nome" name="name" id="nome" />
+              <InputField label="Descrição" name="description" id="descricao" />
+              <InputField label="Episódio" name="ep_counter" type="number" id="ep" />
               <div
                 style={{
                   display: "flex",
@@ -133,9 +132,9 @@ const Watching: React.FC = () => {
                   gap: "10px",
                 }}
               >
-                {/* <Button onClick={() => {}} secondary>
+                <Button onClick={() => {}} secondary testid="button-cancelar">
                   Cancelar
-                </Button> */}
+                </Button>
                 <SubmitButton label="Confirmar" />
               </div>
             </Form>

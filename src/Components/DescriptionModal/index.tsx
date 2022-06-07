@@ -41,8 +41,8 @@ const DescriptionModal: React.FC<DescriptionModalProps> = ({
           <div style={{ padding: '10px', border: `1px solid ${colorPalette.primary[500]}`, borderRadius: '5px' }}>
             {editDescription ? (
               <>
-                <InputField label="Nome" name="name" defaultValue={descriptionModal.anime?.name} />
-                <InputField label="Descrição" name="description" defaultValue={descriptionModal.anime?.description} textArea />
+                <InputField id="nomeEditar" label="Nome" name="name" defaultValue={descriptionModal.anime?.name} />
+                <InputField id="descricaoEditar" label="Descrição" name="description" defaultValue={descriptionModal.anime?.description} textArea />
                 <div
                   style={{
                     display: "flex",
@@ -70,7 +70,7 @@ const DescriptionModal: React.FC<DescriptionModalProps> = ({
                       ''
                     )}
                     <div style={{ display: 'flex', justifyContent: 'flex-end', alignContent: 'flex-end', marginTop: '20px' }}>
-                      <FiEdit onClick={() => setEditDescription(true)} size="18px" style={{ cursor: 'pointer' }} />
+                      <FiEdit id='editButton' onClick={() => setEditDescription(true)} size="18px" style={{ cursor: 'pointer' }} />
                     </div>
                   </div>
                 </div>

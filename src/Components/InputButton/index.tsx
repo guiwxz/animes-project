@@ -7,7 +7,7 @@ interface SubmitButtonProps {
 }
 
 const SubmitButton: React.FC<SubmitButtonProps> = (props) => {
-  return <StyledSubmitButton type="submit" name="submit" value={props.label} {...props} />;
+  return <StyledSubmitButton id="submit" type="submit" name="submit" value={props.label} {...props} />;
 };
 
 export default SubmitButton;

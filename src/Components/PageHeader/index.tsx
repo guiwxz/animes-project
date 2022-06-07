@@ -7,10 +7,9 @@ import { Grid } from "../Grid";
 interface PageHeaderProps {
   onClick: () => void;
   title: string;
-  testPath: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ onClick, title, testPath }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({ onClick, title }) => {
   return (
     <Grid container>
       <Grid
@@ -33,7 +32,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ onClick, title, testPath }) => 
           justifyContent: "flex-end",
         }}
       >
-        <Button onClick={onClick} testPath={`${testPath}--pageheader--add-button`}>
+        <Button onClick={onClick} testid={`pageheader--add-button`}>
           <FaPlus size="16px" /> Add anime
         </Button>
       </Grid>
